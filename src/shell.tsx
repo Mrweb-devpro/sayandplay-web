@@ -1,6 +1,6 @@
 import {createContext,useContext,useEffect,useRef,useState,type Dispatch,type MutableRefObject,type ReactNode,type SetStateAction} from "react";
 import {Outlet,useLocation,useNavigate} from "react-router";
-import {Star,Medal,Settings2,Hand,Mic,Sparkles,Volume2,X,House,Music,Play,LayoutGrid,ListOrdered} from "lucide-react";
+import {Star,Medal,Settings2,Hand,Mic,Sparkles,Volume2,X,House,Music,Play,LayoutGrid,ListOrdered,Shapes} from "lucide-react";
 import {initial,restore,lines,type Saved} from "./game";
 import {music,speechEngine} from "./speech";
 import {speak} from "./guide";
@@ -125,14 +125,14 @@ export function ShellLayout(){
  const levelsPath=levelsPathFor(pathname);
  return <ShellContext.Provider value={shell}><div className={save.motion?"shell":"shell still"} data-theme={themeFor(pathname)}>
  <header><div className="bar">
-   <button className="brand" onClick={()=>playing?shell.openPanel("pause"):navigate("/")}><span className="logo"><Sparkles/></span>Say &amp; Play</button>
+   <button className="brand" onClick={()=>playing?shell.openPanel("pause"):navigate("/")}><span className="logo"><Shapes/></span>Say &amp; Play</button>
    <nav><button className="pill" onClick={()=>shell.openPanel("rewards")}><Star size={18} fill="#ffd45c"/>{save.stars} {save.stars===1?"star":"stars"}</button><button className="pill" onClick={()=>shell.openPanel("parents")}><Settings2 size={18}/>Parents</button></nav>
  </div></header>
  <main><Outlet/>
    {pathname!=="/"&&<button className="back" onClick={()=>{setEngaged(true);setAttempt(a=>a+1);}}><Volume2 size={18}/>Read this screen</button>}
    {storageError&&<p role="status">Storage is unavailable. Progress lasts for this visit.</p>}
  </main>
- <footer><span><Sparkles size={17}/> Say &amp; Play</span>{offline!=="unsupported"&&<span className={"offlineBadge "+offline}>{offline==="ready"?"✓ Ready to play offline":"Saving for offline…"}</span>}<span>Learning games for ages 3–6</span></footer>
+ <footer><span><Shapes size={17}/> Say &amp; Play</span>{offline!=="unsupported"&&<span className={"offlineBadge "+offline}>{offline==="ready"?"✓ Ready to play offline":"Saving for offline…"}</span>}<span>Learning games for ages 3–6</span></footer>
  <dialog ref={dialog} onCancel={()=>setPanel(null)} aria-labelledby="dialog-title"><div className="modalTop"><h2 id="dialog-title">{panel==="setup"?"How shall we play?":panel==="parents"?"Parent settings":panel==="rewards"?"My rewards":"Taking a break?"}</h2><button className="close" aria-label="Close" onClick={()=>setPanel(null)}><X/></button></div>
  {panel==="setup"&&<><p>With voice play the game listens all through each level, so your child just says the answer — no buttons. Answers are understood right here on this device, without internet. Your browser will ask you once to allow the microphone. Nothing is recorded.</p>{[true,false].map(voice=><button className="back" key={String(voice)} onClick={()=>{setSave(s=>({...s,chosen:true,voice}));setPanel(null);const then=afterSetup.current;afterSetup.current=null;then?.();}}>{voice?<Mic/>:<Hand/>}{voice?"Voice and tap":"Tap only"}</button>)}</>}
  {panel==="parents"&&<>{([{k:"sound",label:"Celebration sounds",Icon:Volume2},{k:"music",label:"Background music",Icon:Music},{k:"narrate",label:"Spoken guidance",Icon:Volume2},{k:"motion",label:"Moving tiles",Icon:Sparkles},{k:"voice",label:"Voice play",Icon:Mic}] as const).map(({k,label,Icon})=><label key={k} className="setting"><Icon size={20}/>{label}<input type="checkbox" disabled={k==="voice"&&!supported} checked={save[k]&&(k!=="voice"||supported)} onChange={e=>{blocked.current=false;setMicMessage("");setSave({...save,[k]:e.target.checked,chosen:k==="voice"||save.chosen});}}/></label>)}<p className="note">{!supported?"Voice recognition is unavailable here. Tap to answer.":voiceKind==="browser"?"Voice play is using the browser’s own recogniser because the offline one could not start; it may need internet.":"Voice play listens all through each level and recognises number words offline, on this device."} After five quiet seconds the guide checks in, then gives a clue, then takes a break. Say &amp; Play saves no audio or transcripts. Stars and settings stay on this device.</p></>}

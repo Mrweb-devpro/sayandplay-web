@@ -12,10 +12,15 @@ export default defineConfig({
      manifest:{
        name:"Say & Play",short_name:"Say & Play",description:"Hands-free learning games for ages 3–6.",
        theme_color:"#7042c7",background_color:"#fcfaf7",display:"standalone",start_url:"/",
-       icons:[{src:"/icon.svg",sizes:"any",type:"image/svg+xml",purpose:"any"}],
+       icons:[
+         {src:"/pwa-192.png",sizes:"192x192",type:"image/png",purpose:"any"},
+         {src:"/pwa-512.png",sizes:"512x512",type:"image/png",purpose:"any"},
+         {src:"/maskable-512.png",sizes:"512x512",type:"image/png",purpose:"maskable"},
+         {src:"/icon.svg",sizes:"any",type:"image/svg+xml",purpose:"any"},
+       ],
      },
      workbox:{
-       globPatterns:["**/*.{js,css,html,svg,woff,woff2,mp3}","models/*.tar.gz"],
+       globPatterns:["**/*.{js,css,html,svg,png,woff,woff2,mp3}","models/*.tar.gz"],
        maximumFileSizeToCacheInBytes:60*1024*1024,
      },
    }),
