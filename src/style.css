@@ -1,0 +1,105 @@
+:root{--ink:#302744;--line:#e9e4ed;
+ /* Number Playroom (default): purple */
+ --purple:#7042c7;--brand-deep:#4e2b93;--brand-logo:#7950cb;--brand-logo-shadow:#5534a3;--brand-soft:#eee5fc;--brand-line:#e3d5f4;--brand-tint:#c8b2e4;--brand-ink:#57348c;
+ --brand-wash:#f5effd;--brand-wash2:#f6f2fb;--brand-wash3:#efe7fb;--brand-glow:#e0cefa;--brand-eyebrow:#64448c;--brand-dot:#9a75d1;--brand-pressed:#e5dcfa;--brand-pressed-line:#9268bf;
+ --brand-muted:#8d73b5;--brand-medal-bg:#e9def8;--brand-medal:#7953a7}
+/* Spell It: orange */
+[data-theme=spell]{--purple:#d4510a;--brand-deep:#9c3a05;--brand-logo:#f07a26;--brand-logo-shadow:#c4560e;--brand-soft:#ffecd9;--brand-line:#ffd5b0;--brand-tint:#ffbf8a;--brand-ink:#9a3d08;
+ --brand-wash:#fff5ec;--brand-wash2:#fff3e8;--brand-wash3:#ffeedd;--brand-glow:#ffd8b5;--brand-eyebrow:#a14a12;--brand-dot:#ff9c55;--brand-pressed:#ffe0c4;--brand-pressed-line:#e8833d;
+ --brand-muted:#c07a45;--brand-medal-bg:#ffe5cc;--brand-medal:#b5541a}
+/* Say & Play landing and game picker: bright blue */
+[data-theme=home]{--purple:#3b55d6;--brand-deep:#2a3ea3;--brand-logo:#4a67e6;--brand-logo-shadow:#2f47b8;--brand-soft:#e7edff;--brand-line:#d3ddff;--brand-tint:#b8c6f5;--brand-ink:#2c3f9c;
+ --brand-wash:#f3f6ff;--brand-wash2:#f1f4ff;--brand-wash3:#eaf0ff;--brand-glow:#d6e0ff;--brand-eyebrow:#34479a;--brand-dot:#6f87ee;--brand-pressed:#dde5ff;--brand-pressed-line:#6f87ee;
+ --brand-muted:#7a8bc7;--brand-medal-bg:#e1e8ff;--brand-medal:#3b55d6}
+*{box-sizing:border-box}body{margin:0;background:#fcfaf7;color:var(--ink);font:700 16px/1.5 Nunito,system-ui,sans-serif}button{cursor:pointer;font:inherit}button:disabled{cursor:default}button:focus-visible,input:focus-visible{outline:4px solid #306aa0;outline-offset:4px}h1:focus{outline:0}h1,h2,h3,.brand,.primary,.tile,.choices,.rewardStrip strong,.score{font-family:Fredoka,"Trebuchet MS",sans-serif;font-weight:600}h1,h2,h3,p{margin:0}h1{font-size:clamp(2.7rem,5vw,4.7rem);letter-spacing:-.045em;line-height:1.06}h2{font-size:1.8rem;line-height:1.2;letter-spacing:-.025em}h3{font-size:1.42rem}header{background:#fffdfb;border-bottom:1px solid var(--line)}.bar,main,footer{width:min(1120px,calc(100% - 64px));margin:auto}.bar,nav,.brand,.pill,.primary,.eyebrow,.back,.boardBar,.voice,.modalTop,.setting,.score,.badge small,.award,.howTop,.rewardStrip,.headingRow,footer,footer span,.feedback{display:flex;align-items:center}.bar,.howTop,.headingRow,.boardBar,.modalTop,footer{justify-content:space-between}.bar{min-height:76px}nav,.brand,.pill,.primary,.back,.eyebrow,.voice,.award,footer span,.feedback{gap:9px}.brand{font-size:1.55rem;letter-spacing:-.04em}.logo,.iconBox,.medalIcon,.bigStar{display:grid;place-items:center}.logo{color:white;background:var(--brand-logo);border-radius:13px;width:39px;height:39px;transform:rotate(-5deg);box-shadow:inset 0 -3px var(--brand-logo-shadow)}.pill,.voice,.close{background:white;border:1.5px solid #ddd6e6;border-radius:24px;padding:8px 15px;min-height:44px;font-weight:800}nav .pill:first-child{background:#fff9e9}.shell{min-height:100vh;display:flex;flex-direction:column}main{padding:32px 0 28px;flex:1}.hero{background:var(--brand-soft);border-radius:32px;display:grid;grid-template-columns:1fr 1.07fr;align-items:center;overflow:hidden;border:2px solid var(--brand-line);position:relative}.heroText{padding:42px 0 42px clamp(24px,4.3vw,65px);z-index:1}.hero h1{font-size:clamp(3rem,6.2vw,5.5rem);margin:12px 0}.hero em{color:var(--purple);font-style:normal}.hero p,.lead{font-size:1.1rem;color:#554a65}.eyebrow,.level small{font-size:.72rem;letter-spacing:.15em;font-weight:800;color:var(--brand-eyebrow)}.tiny-dot{width:9px;height:9px;background:var(--brand-dot);border-radius:50%}.primary{background:var(--purple);color:white;display:inline-flex;border-radius:17px;padding:12px 24px;min-height:52px;font-size:1.25rem;box-shadow:0 4px var(--brand-deep);transition:transform .15s}.primary:hover,.choices button:hover{transform:translateY(-2px)}.hero .primary{margin-top:23px}.hero .nr-friends{border-radius:0;background:transparent}.headingRow{margin:29px 0 15px}.dots{color:#af90d5;font-size:1.5rem}.howGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.how,.level,.rewardStrip,.board{border:1.5px solid var(--line);border-radius:22px;background:#fff}.how{padding:19px 22px}.howTop{margin-bottom:12px}.how0{--tint:#e7dcfb;--accent:#7045ab}.how1{--tint:#d7efe7;--accent:#31765e}.how2{--tint:#fff0ce;--accent:#935d13}.how3{--tint:#f9dfee;--accent:#954b68}.iconBox,.medalIcon{width:45px;height:45px;background:var(--tint);color:var(--accent);border-radius:14px}.step{color:#a69cae;font:500 1.15rem Fredoka}.how p,.level p,.rewardStrip small{color:#63596e}.how p{margin-top:4px;max-width:29ch}.rewardStrip{margin-top:20px;padding:18px 23px;width:100%;gap:16px;text-align:left;background:var(--brand-wash2)}.rewardStrip strong,.rewardStrip small{display:block}.rewardStrip strong{font-size:1.22rem}.medalIcon{background:var(--brand-medal-bg);color:var(--brand-medal)}.rewardStrip>svg{color:var(--brand-medal)}footer{border-top:1px solid var(--line);padding:17px 0;font-size:.85rem;color:#72677c}.back{min-height:44px;color:var(--purple);margin:8px 0 18px;font-weight:800}.lead{margin:12px 0 25px}.levels{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.level{text-align:left;padding:24px;position:relative}.level>svg:last-child{position:absolute;right:20px;top:28px}.level small{display:block;margin:14px 0 5px}.level:hover{background:var(--tint)}.board{max-width:720px;margin:auto;text-align:center;padding:24px;background:var(--brand-wash)}.boardBar{margin-bottom:16px}.board h1{font-size:clamp(2.5rem,5vw,4rem);margin:8px 0}.track{display:grid;place-items:center;height:215px;background:radial-gradient(ellipse,var(--brand-glow),transparent 69%)}.tile{background:#ffcf70;border:3px solid #efb34c;color:#483041;box-shadow:0 7px #dca049;border-radius:24px;width:135px;font-size:4.8rem;line-height:1;padding:10px 0;animation:float ease-in-out infinite alternate}.tile small{display:block;font-size:1.12rem;text-transform:uppercase;letter-spacing:.12em}.tile.won{background:#c8edcb;border-color:#a6ceaa;box-shadow:0 7px #8ab58e}.choices,.badgeGrid{display:flex;justify-content:center;gap:14px}.choices button{background:white;border:2px solid var(--brand-tint);box-shadow:0 4px var(--brand-tint);color:var(--brand-ink);border-radius:18px;min-width:70px;font-size:2.3rem}.feedback{justify-content:center;min-height:44px;margin:5px 0 10px}.voice{margin:22px auto 0}.board .back,.result .primary{justify-content:center;margin:18px auto 0}.bigStar{color:#94621e;padding:24px}.award{justify-content:center;color:#7951a4}.result{padding:40px 20px}.close{padding:8px}.modalTop{gap:12px;margin-bottom:14px}dialog{padding:24px;border:1px solid var(--line);border-radius:24px;width:min(440px,calc(100% - 28px));background:#fffdfb;color:var(--ink);margin:auto;max-height:90dvh}dialog::backdrop{background:#271d3c65}.setting{gap:12px;min-height:54px;border-bottom:1px solid var(--line)}.setting input{margin-left:auto;width:22px;height:22px;accent-color:var(--purple)}.note{margin-top:15px;color:#5e526d;font-size:.9rem}.score{gap:10px;font-size:1.4rem}.badgeGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}.badge{background:#f1eef3;padding:12px;border-radius:13px}.badge strong,.badge small{margin-top:5px;display:block}.badge small{display:flex;gap:5px}.owned{background:#fff0ca}.still .tile{animation:none}@keyframes float{from{transform:translateY(17px)}to{transform:translateY(-19px)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}@media(max-width:720px){.bar,main,footer{width:calc(100% - 32px)}.hero{grid-template-columns:1fr}.heroText{padding:27px 24px 2px}.hero .nr-friends{max-width:400px;margin:-4px auto 0}.hero h1{font-size:3.6rem}.hero p{font-size:1rem}.howGrid{grid-template-columns:1fr}.how{display:grid;grid-template-columns:46px 1fr;gap:0 14px;padding:14px}.howTop{grid-row:span 2;margin:0}.how p{max-width:100%;margin:0}.step,.desktop{display:none}.levels{grid-template-columns:1fr}.bar{min-height:65px}.pill{padding:7px 10px;gap:4px}.brand{font-size:1.18rem;gap:6px}.logo{width:32px;height:32px}.bar nav{gap:6px}main{padding-top:17px}.board{padding:15px}.headingRow{margin-top:22px}.howGrid{gap:9px}}@media(max-width:370px){.pill span{display:none}.bar,main,footer{width:calc(100% - 20px)}}
+
+.worlds,.levelGrid{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.worlds [aria-pressed=true]{background:var(--brand-pressed);border-color:var(--brand-pressed-line)}.levelGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(66px,1fr));gap:8px}.levelGrid .pill{justify-content:center}.dotGroup{display:grid;grid-template-columns:repeat(3,18px);grid-template-rows:repeat(3,18px);gap:6px;justify-content:center;padding:8px}.dotGroup i{width:18px;height:18px;border-radius:50%;background:#49314c}.dotGroup.frame{grid-template-columns:repeat(5,16px);grid-template-rows:repeat(2,16px);gap:8px 5px;padding:16px 8px}.dotGroup.frame i{width:16px;height:16px}.dotGroup i.empty{background:transparent;box-shadow:inset 0 0 0 2px #c79a4a}.choices{flex-wrap:wrap}@media(max-width:500px){.choices{gap:8px}.choices button{min-width:44px;font-size:1.9rem}.rewardStrip{flex-wrap:wrap}}
+/* ---------- Game picker (home) ---------- */
+.gameGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gameCard{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;border:1.5px solid var(--line);border-radius:22px;background:#fff;padding:19px 22px;min-height:44px}
+.gameCard:not(:disabled):hover{background:var(--tint)}
+.gameCard .gameIcon{font-size:2.3rem;line-height:1}
+.gameCard h3{margin-top:4px}.gameCard p{color:#63596e}
+.gameCard .tag{margin-top:6px;font-size:.8rem;color:var(--accent);background:var(--tint);border-radius:999px;padding:3px 11px}
+.gameCard:disabled{opacity:.7;cursor:default}
+/* ---------- Spell It ---------- */
+.modeGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.modeCard{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;text-align:left;border:1.5px solid var(--line);border-radius:22px;background:#fff;padding:22px;min-height:44px}
+.modeCard:hover{background:var(--brand-wash2)}.modeCard strong{font:600 1.5rem Fredoka,"Trebuchet MS",sans-serif}.modeCard small{flex-basis:100%;color:#63596e;font-size:1rem}
+.modeIcon{font-size:2.6rem;line-height:1}
+.levelGrid .pill svg{flex-shrink:0}.inline{display:inline;vertical-align:-2px}
+.board.spell{position:relative;overflow:hidden}
+.spellStage{display:flex;align-items:center;justify-content:center;gap:24px;min-height:150px;margin:6px 0 10px;background:radial-gradient(ellipse,var(--brand-glow),transparent 69%)}
+.foodPic{font-size:6rem;line-height:1;filter:drop-shadow(0 6px 0 #0000001a);animation:float 3s ease-in-out infinite alternate}
+.foodPic.won{animation:pop .6s ease}
+.spellTarget{font:600 clamp(3rem,7vw,4.8rem) Fredoka,"Trebuchet MS",sans-serif;letter-spacing:.08em;color:#483041;background:#ffcf70;border:3px solid #efb34c;box-shadow:0 7px #dca049;border-radius:24px;padding:4px 22px}
+.spellTarget.secret{background:var(--brand-wash3);border-color:var(--brand-tint);box-shadow:0 7px var(--brand-tint);color:var(--brand-muted);letter-spacing:.25em}
+.slots{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:10px 0 4px}
+.slot{width:58px;height:66px;display:grid;place-items:center;border-radius:16px;border:3px dashed var(--brand-tint);background:#fff;font:600 2.4rem Fredoka,"Trebuchet MS",sans-serif;color:var(--brand-ink)}
+.slot.next{border-color:var(--brand-logo);box-shadow:0 0 0 5px var(--brand-logo)22}
+.slot.full{border-style:solid;border-color:#a6ceaa;background:#c8edcb;animation:drop .35s ease}
+.tiles{flex-wrap:wrap}
+.tiles button:disabled{opacity:.25;transform:scale(.9)}
+.tiles button.hinted{border-color:#f0a63a;box-shadow:0 4px #f0a63a;animation:pulse 1s ease-in-out infinite}
+.tiles button.shake{animation:shake .4s ease}
+.cheer{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;pointer-events:none}
+.cheer .thumb{font-size:7rem;line-height:1;animation:pop .7s ease}
+.cheer strong{font:600 3rem Fredoka,"Trebuchet MS",sans-serif;color:var(--purple);text-shadow:0 3px #fff;animation:pop .7s .1s ease both}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-20px;border-radius:2px;animation:confetti linear forwards}
+@keyframes confetti{to{top:110%;transform:rotate(720deg) translateX(40px)}}
+@keyframes pop{0%{transform:scale(.3);opacity:0}60%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}
+@keyframes drop{from{transform:translateY(-18px) scale(.8)}to{transform:none}}
+@keyframes pulse{50%{box-shadow:0 4px #f0a63a,0 0 0 8px #f0a63a55;background:#fff4dd}}
+@keyframes shake{25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}
+@media(max-width:720px){.gameGrid,.modeGrid{grid-template-columns:1fr}.foodPic{font-size:4.4rem}.slot{width:44px;height:52px;font-size:1.9rem}.spellStage{gap:14px;min-height:120px}}
+/* ---------- Say & Play landing art, Spell It art, game cards ---------- */
+.sp-art,.food-art{position:relative;aspect-ratio:1.72;width:100%;overflow:hidden}
+.sp-art .bubble{position:absolute;display:grid;place-items:center;border-radius:50%;font-size:clamp(2.6rem,6vw,4.6rem);box-shadow:0 10px 0 #0000000f;animation:float 2.8s ease-in-out infinite alternate}
+.sp-art .b1{width:34%;aspect-ratio:1;left:6%;top:30%;background:#e9dcfd;border:4px solid #c9b0f2}
+.sp-art .b2{width:30%;aspect-ratio:1;left:38%;top:8%;background:#ffe3c7;border:4px solid #ffbf8a;animation-delay:-.9s}
+.sp-art .b3{width:28%;aspect-ratio:1;left:66%;top:42%;background:#d3f3ef;border:4px solid #8fd8cf;animation-delay:-1.7s}
+.sp-art .speech{position:absolute;right:6%;top:9%;background:#fff;border:3px solid var(--brand-tint);border-radius:22px 22px 22px 4px;padding:8px 16px;font:600 clamp(1rem,2.2vw,1.5rem) Fredoka,"Trebuchet MS",sans-serif;color:var(--brand-ink);transform:rotate(4deg)}
+.sp-art .nr-spark,.food-art .nr-spark{position:absolute}
+.food-art span{position:absolute;font-size:clamp(2.8rem,6.5vw,5rem);filter:drop-shadow(0 8px 0 #0000001a);animation:float 3s ease-in-out infinite alternate}
+.food-art .f1{left:8%;top:18%}.food-art .f2{left:34%;top:52%;animation-delay:-.7s}.food-art .f3{left:58%;top:12%;animation-delay:-1.4s}.food-art .f4{left:76%;top:50%;animation-delay:-2.1s}
+.food-art b{position:absolute;display:grid;place-items:center;width:clamp(42px,6vw,60px);aspect-ratio:1;border-radius:14px;background:#fff;border:2px solid var(--brand-tint);box-shadow:0 4px var(--brand-tint);font:600 clamp(1.4rem,3vw,2.1rem) Fredoka,"Trebuchet MS",sans-serif;color:var(--brand-ink)}
+.food-art .t1{left:24%;top:16%;transform:rotate(-8deg)}.food-art .t2{left:52%;top:36%;transform:rotate(6deg)}.food-art .t3{left:84%;top:14%;transform:rotate(-4deg)}
+.game-numbers{--tint:#e7dcfb;--accent:#6a3fb5}.game-spell{--tint:#ffe3c7;--accent:#b34a08}.game-road{--tint:#d3f3ef;--accent:#11756b}
+.gameCard{border-top:6px solid var(--accent)}
+.tapStart{margin-top:22px;font-size:1.5rem;min-height:64px;padding:14px 32px}
+.boardBar strong{text-align:center;padding:0 8px}
+@media(max-width:720px){.hero .sp-art,.hero .food-art{max-width:400px;margin:-4px auto 0}.boardBar{flex-wrap:wrap;gap:8px}.boardBar strong{order:-1;flex-basis:100%}}
+
+/* Road Rush: bright teal and blue, with colourful traffic */
+[data-theme=road]{--purple:#0a7f87;--brand-deep:#055a60;--brand-logo:#14a3ad;--brand-logo-shadow:#0b7a82;--brand-soft:#d6f5f3;--brand-line:#b5ebe7;--brand-tint:#8fdcd6;--brand-ink:#0a5f66;
+ --brand-wash:#effbfa;--brand-wash2:#ecfaf9;--brand-wash3:#e2f7f5;--brand-glow:#c2efeb;--brand-eyebrow:#0b6870;--brand-dot:#2cc4c9;--brand-pressed:#d0f2ef;--brand-pressed-line:#2cb3b9;
+ --brand-muted:#5aa7ab;--brand-medal-bg:#d4f3f0;--brand-medal:#0a7f87}
+.road-art{position:relative;aspect-ratio:1.72;width:100%;overflow:hidden}
+.road-art .lane{position:absolute;left:0;right:0;height:22%;background:#4b5262;border-top:3px dashed #ffffffaa}
+.road-art .l1{top:14%}.road-art .l2{top:38%}.road-art .l3{top:62%;background:repeating-linear-gradient(90deg,#6b4f3a 0 8px,#9c8a76 8px 18px);border-top:3px solid #c9ced6}
+.road-art span.v{position:absolute;font-size:clamp(2rem,4.6vw,3.4rem);animation:drive 5s linear infinite}
+.road-art .v1{top:14%;animation-duration:4.2s}.road-art .v2{top:37%;animation-duration:6s;animation-delay:-2s}.road-art .v3{top:61%;animation-duration:3.4s;animation-delay:-1s}
+.road-art .pip{position:absolute;left:58%;bottom:-2%;font-size:clamp(2.4rem,5vw,3.6rem);animation:float 1.2s ease-in-out infinite alternate}
+.road-art b{position:absolute;display:grid;place-items:center;width:clamp(38px,5.5vw,54px);aspect-ratio:1;border-radius:12px;background:#fff;border:2px solid var(--brand-tint);box-shadow:0 4px var(--brand-tint);font:600 clamp(1.3rem,2.8vw,1.9rem) Fredoka,"Trebuchet MS",sans-serif;color:var(--brand-ink)}
+.road-art .t1{left:8%;top:84%;transform:rotate(-8deg)}.road-art .t2{left:84%;top:2%;transform:rotate(7deg)}
+@keyframes drive{from{left:-15%}to{left:110%}}
+.board.road{position:relative;overflow:hidden;max-width:820px}
+.roadWord{display:inline-block;color:var(--purple);white-space:nowrap}
+.timer{position:relative;height:18px;border-radius:999px;background:#fff;border:2px solid var(--brand-tint);margin:6px 34px 10px 0;overflow:visible}
+.timerFill{position:absolute;inset:0 auto 0 0;border-radius:999px;background:linear-gradient(90deg,#2fbf71,#18b3c4);transition:width .1s linear}
+.timerFill[data-low]{background:linear-gradient(90deg,#ff7a3d,#ff5d73)}
+.timerIcon{position:absolute;right:-34px;top:50%;transform:translateY(-50%);font-size:1.6rem}
+.roadCanvas{position:relative;border-radius:18px;overflow:hidden;background:#8fd694;min-height:120px;line-height:0}
+.roadCanvas canvas{display:block;width:100%!important;height:auto!important}
+.countdown{position:absolute;inset:0;display:grid;place-items:center;font:600 7rem/1 Fredoka,"Trebuchet MS",sans-serif;color:#fff;text-shadow:0 5px 0 var(--purple);animation:pop .55s ease;pointer-events:none}
+.roadFallback{display:flex;flex-direction:column-reverse;gap:6px;padding:14px;line-height:1.2;font-size:1.6rem}
+.roadFallback span{background:#4b5262;border-radius:8px;padding:4px 10px;text-align:left}.roadFallback span.crossed{background:#2fbf71}
+.stageTitle{margin-top:22px}.stageTitle small{font:700 .95rem Nunito,system-ui,sans-serif;color:#63596e}
+/* Offline status (footer) */
+.offlineBadge{border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:800;border:1.5px solid var(--line);background:#fff}
+.offlineBadge.ready{color:#1f7a45;background:#e3f7ea;border-color:#b7e4c7}
+.offlineBadge.saving{color:#8a5a00;background:#fff4dd;border-color:#f3d79b}
+.offlineBadge.saving::before{content:"";display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;vertical-align:-1px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:720px){footer{flex-wrap:wrap;gap:8px}.offlineBadge{order:-1;flex-basis:100%;text-align:center}}
