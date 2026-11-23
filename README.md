@@ -32,7 +32,7 @@ Open http://127.0.0.1:3157 (the original uses 3156, so both can run side by side
 
 ## Tech stack
 - **Runtime:** React 19, React Router, PixiJS (Road Rush graphics), TypeScript, Vite (build and local server), vite-plugin-pwa (offline install), vosk-browser (offline speech recognition), lucide-react (icons), Fontsource (local fonts). Styling is plain CSS (`src/reset.css` + `src/style.css`).
-- **Tools only:** kokoro-js and lamejs (record narrator clips), Playwright and the Node test runner (tests).
+- **Tools only:** kokoro-js and lamejs in `scripts/` (record narrator clips, installed on demand), Playwright and the Node test runner (tests).
 
 ## Game 2 — Spell It
 Two modes, 40 levels each, 3 items per level:
@@ -76,7 +76,7 @@ Every sentence the game can say is defined in `lines` in `src/game.ts`. After ch
 ```powershell
 npm.cmd run voice
 ```
-This records only missing clips (the first run downloads the Kokoro model, ~90 MB, once). To try a different voice, re-record everything, for example:
+This records only missing clips (the first run downloads the Kokoro model, ~90 MB, once). The recording tools live in their own small package in `scripts/` and are installed by this command only, so a normal install or a Vercel build never downloads them. To try a different voice, re-record everything, for example:
 ```powershell
 $env:VOICE='af_bella'; npm.cmd run voice -- --force
 ```

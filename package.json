@@ -10,7 +10,8 @@
     "test": "node --test tests/game.test.mjs",
     "typecheck": "tsc --noEmit",
     "test:browser": "playwright test",
-    "voice": "node scripts/make-voice.mjs"
+    "voice": "npm --prefix scripts install --no-audit --no-fund && node scripts/make-voice.mjs",
+    "test-audio": "npm --prefix scripts install --no-audit --no-fund && node scripts/make-test-audio.mjs"
   },
   "dependencies": {
     "@fontsource/fredoka": "^5.3.0",
@@ -23,13 +24,11 @@
     "vosk-browser": "^0.0.8"
   },
   "devDependencies": {
-    "@breezystack/lamejs": "^1.2.7",
     "@playwright/test": "^1.65.1",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
-    "kokoro-js": "^1.2.1",
     "typescript": "^5.9.3",
     "vite": "^8.3.8",
     "vite-plugin-pwa": "^2.0.0"

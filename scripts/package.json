@@ -1,0 +1,10 @@
+{
+  "name": "say-and-play-voice-tools",
+  "private": true,
+  "type": "module",
+  "description": "Offline tools for re-recording the narrator clips. Not needed to build or run the game (and kept out of the main install, so hosting like Vercel never downloads them).",
+  "dependencies": {
+    "@breezystack/lamejs": "^1.2.7",
+    "kokoro-js": "1.2.1"
+  }
+}
